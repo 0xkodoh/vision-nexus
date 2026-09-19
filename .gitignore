@@ -23,3 +23,5 @@ aws_credentials.json
 .DS_Store
 Thumbs.db
 *.log
+
+PITCH_SCRIPT.md
