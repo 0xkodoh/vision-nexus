@@ -58,16 +58,18 @@ export const Header: React.FC<HeaderProps> = ({
     <header className="border-b border-industrial-750 bg-industrial-900/90 backdrop-blur-md sticky top-0 z-40 px-4 lg:px-6 py-3">
       <div className="flex flex-wrap items-center justify-between gap-4">
         {/* Left Branding */}
-        <div className="flex items-center space-x-3">
-          <div className="relative flex items-center justify-center w-10 h-10 rounded-lg bg-industrial-800 border border-cyan-500/30 text-cyan-400 shadow-[0_0_15px_rgba(6,182,212,0.15)]">
-            <Cpu className="w-6 h-6 animate-pulse" />
-            <div className="absolute -top-1 -right-1 w-2.5 h-2.5 rounded-full bg-cyan-400 animate-ping opacity-75" />
+        <div className="flex items-center space-x-4">
+          <div className="relative flex items-center h-8">
+            <img src="/Logos/logo-white-2.svg" alt="Vision Nexus Logo" className="h-full w-auto object-contain" />
+            <div className="absolute -top-1 -right-2 w-2 h-2 rounded-full bg-cyan-400 animate-ping opacity-75" />
           </div>
-          <div>
+          <div className="flex flex-col justify-center space-y-0.5">
+            {/* HIDDEN: Preserved for potential future use */}
+            <span className="hidden font-mono font-black tracking-wider text-base lg:text-lg text-slate-100 uppercase">
+              VISION<span className="text-cyan-400">·</span>NEXUS
+            </span>
+            
             <div className="flex items-center space-x-2">
-              <span className="font-mono font-black tracking-wider text-base lg:text-lg text-slate-100 uppercase">
-                VISION<span className="text-cyan-400">·</span>OPS
-              </span>
               <span className="px-1.5 py-0.5 text-[10px] font-mono font-bold uppercase rounded bg-cyan-950/80 text-cyan-400 border border-cyan-500/30">
                 OPENCV 5 AOI
               </span>
@@ -75,7 +77,7 @@ export const Header: React.FC<HeaderProps> = ({
                 AWS S3 HYBRID
               </span>
             </div>
-            <p className="text-[11px] font-mono text-slate-400 tracking-tight">
+            <p className="hidden md:block text-[11px] font-mono text-slate-400 tracking-tight">
               Low-Latency Industrial Defect Inspection Architecture
             </p>
           </div>

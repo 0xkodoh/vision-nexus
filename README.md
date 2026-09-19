@@ -1,11 +1,17 @@
-# VISION-OPS: Low-Latency Industrial AOI Pipeline
+# Vision Nexus
+
+<p align="center">
+  <img src="web/public/Logos/logo-white-1.svg" width="400" alt="Vision Nexus Logo">
+</p>
+
+## Low-Latency Industrial Defect Detection Pipeline
 OpenCV AI Competition 2026 Submission
 
 ## Inspiration
 High-speed assembly lines need inspection systems that make decisions in milliseconds. Streaming raw 1080p or 4K video feeds to the cloud for inference introduces significant latency, consumes massive bandwidth, and fails when connectivity drops. We built an automated optical inspection (AOI) pipeline that runs directly on edge hardware using classical computer vision, reserving cloud infrastructure strictly for telemetry, archival storage, and alert routing.
 
 ## What it does
-VISION-OPS is an automated optical inspection system designed for manufacturing lines.
+Vision Nexus is an automated optical inspection system designed for manufacturing lines.
 - **Edge Vision Pipeline**: Ingests video frames from a camera or test feed, compares incoming parts against a calibrated golden template, and flags defects including scratches, surface cracks, pinhole voids, and dimensional misalignments.
 - **Real-Time Performance**: Runs at 111.7 FPS (8.95 ms mean latency) at 480p and 39.8 FPS (25.14 ms) at 720p using native OpenCV operations on standard CPU hardware.
 - **Cloud Telemetry and Alerting**: Encodes flagged defect frames in memory, attaches defect bounding box metadata, pushes them to Amazon S3 via Boto3, and triggers simulated AWS Lambda and SNS alerts.
@@ -46,7 +52,7 @@ We profiled the OpenCV pipeline across standard industrial resolutions on a sing
 - Functional end-to-end integration: edge processing, telemetry generation, AWS event simulation, and live operator feedback.
 - Clean separation of concerns with a verified Docker Compose setup and comprehensive test coverage (7/7 passing unit/integration tests).
 
-## What's next for VISION-OPS
+## What's next for Vision Nexus
 - Integrating OpenCV 5's DNN execution engine with lightweight quantized models (MobileNet/YOLO-nano) for secondary classification on detected defect crops.
 - Hardware testing on physical edge targets (Raspberry Pi 5 and NVIDIA Jetson Orin Nano).
 - Native MQTT publisher implementation for real AWS IoT Greengrass deployments on factory floor hardware.

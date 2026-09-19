@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "VISION-OPS | OpenCV 5 Low-Latency Defect Detection & AWS S3 Dashboard",
+  title: "VISION NEXUS | OpenCV 5 Low-Latency Defect Detection & AWS S3 Dashboard",
   description: "Mission-critical Automated Optical Inspection (AOI) dashboard powered by native OpenCV 5 and AWS S3 hybrid cloud telemetry.",
 };
 

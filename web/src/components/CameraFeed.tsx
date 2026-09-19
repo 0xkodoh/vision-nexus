@@ -603,8 +603,11 @@ export const CameraFeed: React.FC<CameraFeedProps> = ({
                     </p>
 
                     <div className="mt-2.5 pt-2 border-t border-industrial-800/80 flex items-center justify-between text-[10px] font-mono text-slate-400">
-                      <span>Expected:</span>
-                      <span className={isGolden ? "text-emerald-400 font-semibold" : "text-amber-400 font-semibold"}>
+                      <span className="shrink-0 mr-2">Expected:</span>
+                      <span 
+                        className={`truncate text-right ${isGolden ? "text-emerald-400 font-semibold" : "text-amber-400 font-semibold"}`}
+                        title={preset.expectedDefect}
+                      >
                         {preset.expectedDefect}
                       </span>
                     </div>
